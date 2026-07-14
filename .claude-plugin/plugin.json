@@ -1,0 +1,21 @@
+{
+  "name": "agent-skills",
+  "version": "1.0.0",
+  "description": "Roy Bakker's agent skills for real engineering — starting with guided, confirm-before-committing merge conflict resolution.",
+  "author": {
+    "name": "Roy Bakker",
+    "url": "https://github.com/RoyBkker"
+  },
+  "homepage": "https://github.com/RoyBkker/agent-skills",
+  "repository": "https://github.com/RoyBkker/agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "skills",
+    "git",
+    "merge-conflicts"
+  ],
+  "skills": [
+    "./skills/engineering/fix-merge-conflicts"
+  ]
+}

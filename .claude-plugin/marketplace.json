@@ -1,0 +1,22 @@
+{
+  "name": "RoyBkker",
+  "owner": {
+    "name": "Roy Bakker",
+    "url": "https://github.com/RoyBkker"
+  },
+  "description": "Roy Bakker's agent skills for real engineering, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "agent-skills",
+      "source": "./",
+      "description": "Roy Bakker's agent skills for real engineering — starting with guided, confirm-before-committing merge conflict resolution.",
+      "category": "engineering",
+      "keywords": [
+        "engineering",
+        "skills",
+        "git",
+        "merge-conflicts"
+      ]
+    }
+  ]
+}
