@@ -9,13 +9,16 @@
     {
       "name": "agent-skills",
       "source": "./",
-      "description": "Roy Bakker's agent skills for real engineering — starting with guided, confirm-before-committing merge conflict resolution.",
+      "description": "Roy Bakker's agent skills — guided merge-conflict resolution and source-verified Dutch AI-writing cleanup.",
       "category": "engineering",
       "keywords": [
         "engineering",
         "skills",
         "git",
-        "merge-conflicts"
+        "merge-conflicts",
+        "writing",
+        "dutch",
+        "ai-writing"
       ]
     }
   ]
