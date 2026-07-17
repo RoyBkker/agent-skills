@@ -21,7 +21,7 @@ Je bent redacteur voor Nederlandstalige teksten. Je taak: AI-typische schrijfpat
 - *Onbeholpen Nederlands is géén AI-signaal.* AI-Nederlands is juist "keurig"; het klassieke rode vlaggetje "krom taalgebruik" is verdwenen (consensus nl.wikipedia-redacteuren).
 - *Foutloos, gepolijst Nederlands is géén menselijk bewijs.* Gladde, grammaticaal perfecte tekst met weinig inhoud is juist verdacht.
 
-**Houdbaarheid:** tells verouderen. Modelupdates verschuiven patronen — OpenAI onderdrukt sinds november 2025 bijvoorbeeld de em-dash. Weeg recente teksten dus anders dan oude, en leun nooit op één enkel signaal.
+**Houdbaarheid:** tells verouderen. Modelupdates verschuiven patronen — OpenAI onderdrukt sinds november 2025 bijvoorbeeld de em-dash. Weeg recente teksten dus anders dan oude, en leun nooit op één enkel signaal. Voor onderhoud van deze skill zelf: zie het hervalidatieprotocol in [sources.md](./sources.md).
 
 **Uitzondering:** geciteerde voorbeelden, code, en tekst die aan iemand anders wordt toegeschreven vallen buiten de controle. Alleen de eigen auteursproza wordt beoordeeld.
 

@@ -1,6 +1,6 @@
 # Sources for avoid-ai-writing-nl (Dutch)
 
-Created: 2026-07-17. Research method per jurigis/avoid-ai-writing-multilingual CLAUDE.md: web research conducted **in Dutch**, across four independent source layers (Wikipedia community, SEO/content blogs, academic, practitioner reports). No pattern was translated from the English original; universal patterns are marked as such.
+Created: 2026-07-17. **Last validated: 2026-07-17.** Research method per jurigis/avoid-ai-writing-multilingual CLAUDE.md: web research conducted **in Dutch**, across four independent source layers (Wikipedia community, SEO/content blogs, academic, practitioner reports). No pattern was translated from the English original; universal patterns are marked as such.
 
 Evidence labels used below and in SKILL.md:
 - **statistical** — corpus study or measured frequencies
@@ -143,3 +143,22 @@ Full URLs for this layer: frankwatching.com/archive/2024/06/20/ai-woorden-die-we
 1. Watch for a Dutch replication of the excess-vocabulary method (CLIN would be the venue) — it would let Tier-1 move from editorial-consensus to statistical.
 2. The Frankwatching/SoMC lists skew marketing; a journalism-side list (Villamedia, RvdJ) would balance the genre coverage.
 3. Track LinkedIn's own AI-slop detection announcements — platform-level suppression changes what slop survives in the wild, and therefore what the skill should prioritize.
+
+---
+
+## Re-validation protocol (maintenance)
+
+The patterns in SKILL.md are **dated measurements of model behavior, not permanent laws**. The em-dash proved this mid-research: flagged by 8 sources, then suppressed by OpenAI in Nov 2025, leaving a polluted signal. Run this protocol **before any 2.x release**, and otherwise when any trigger fires:
+
+**Triggers**
+- A major new model generation ships (next GPT/Claude/Gemini tier).
+- A vendor announces a deliberate style change (like the Nov 2025 em-dash fix).
+- 12+ months since the "Last validated" date above.
+- The skill starts flagging known-human Dutch text (false positives reported in real use).
+
+**Protocol** (agent-runnable — point Claude at this file and say "voer het hervalidatieprotocol uit"):
+1. **Generate fresh slop.** Prompt the then-current mainstream models (default settings, no style instructions) for the reference genres in Dutch: a LinkedIn-bedrijfspost, an SEO-blogintro, and a zakelijke e-mail. At least 10 samples across models.
+2. **Tier check.** Count which Tier-1/Tier-2/Tier-3 entries and P0 formulas actually occur in the fresh samples. Entries that no longer appear: demote to a "historisch" annotation (do not silently delete — the skill may still meet older text). New recurring words/formulas: candidate additions, subject to step 3.
+3. **Source refresh.** Re-run the four-layer search (nl.wikipedia community, Dutch SEO/content blogs, academic, practitioner reports) for sources newer than the ledger date; update the convergence counts in Layer 3. A candidate from step 2 enters Tier-1 only with ≥3 independent sources or corpus backing — same bar as v1.
+4. **Dated tells.** Re-assess every pattern carrying a dating caveat (#18 em-dash first) and decide: keep, downgrade severity, or annotate as generation-specific.
+5. **Record.** Update the "Last validated" date, adjust counts, bump the skill version, and note demotions/additions in the commit message.
